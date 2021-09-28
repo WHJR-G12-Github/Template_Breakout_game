@@ -57,12 +57,9 @@ while carryOn:
     # Drawing the bricks on the screen by calling the 'draw_brick()' function
     # Call the function for every brick list created
     draw_brick(bricks1)
-    
     # Call 'draw_brick()' to draw 'bricks2'
     
-    
     # Call 'draw_brick()' to draw 'bricks3'
-    
     
     
     # Ball movement    
@@ -86,22 +83,28 @@ while carryOn:
     # Scoring for each brick layer
     for i in bricks1:
         if i.collidepoint(ball.x,ball.y):
-            bricks1.remove(i)
+            # Remove the brick 'i' from 'bricks1' list
+            
             velocity[0] = -velocity[0]
             velocity[1]=-velocity[1]
-            score+=3
+            # Increment the value of 'score' by 3
+            
     for i in bricks2:
         if i.collidepoint(ball.x,ball.y):
-            bricks2.remove(i)
+            # Remove the brick 'i' from 'bricks2' list
+            
             velocity[0] = -velocity[0]
             velocity[1]=-velocity[1]
-            score+=2
+            # Increment the value of 'score' by 2
+            
     for i in bricks3:
         if i.collidepoint(ball.x,ball.y):
+            # Remove the brick 'i' from 'bricks2' list
+        
             velocity[0] = -velocity[0]
             velocity[1]=-velocity[1]
-            bricks3.remove(i)
-            score+=1
+            # Increment the value of 'score' by 1
+            
                 
    
     # Maximum score on breaking all the bricks would be 36
